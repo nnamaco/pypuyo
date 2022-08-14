@@ -1,6 +1,6 @@
 [project]
 name = "pypuyo"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
   { name="nnamaco", email="eureka5129@gmail.com" },
 ]
