@@ -15,6 +15,7 @@ A pip package to make Puyo-Puyo-ish games.
 ### Classes
 'Game':
 |method      |desciption                    |arguments                                        |
+|----        |----                          |----                                             | 
 |`__init__`  |Constructor.                  |`width`: Width of the game.<br>
                                              `height`: Height of the game.<br>
                                              `types`: Array of possible puyos to fall.<br>
