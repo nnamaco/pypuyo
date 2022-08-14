@@ -1,1 +1,1 @@
-from pyyo.pyyo import *
+from pypuyo.pypuyo import *
