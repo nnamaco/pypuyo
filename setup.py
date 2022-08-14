@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name="pyyo",
     version="0.0.1",
-    author="nnmaco",
+    author="nnamaco",
     author_email="eureka5129@gmail.com",
     license='MIT',
     description="You can make a simple Puyo-Puyo-ish game.",
