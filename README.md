@@ -1,6 +1,6 @@
 # Pypuyo
 A pip package to make Puyo-Puyo-ish games.
-```
+```python
 >>> import pypuyo as ppy
 >>> from time import sleep
 >>> game = ppy.Game(width=3, height=3, frames_to_fall=1)
@@ -27,15 +27,15 @@ A pip package to make Puyo-Puyo-ish games.
 # Usage
 ## Quickstart
 1. Create game instance by:
-```
+```python
 game = pypuyo.Game()
 ```
 2. Go to next frame by:
-```
+```python
 game.update()
 ```
 3. Get array by:
-```
+```python
 game.get()
 ```
 ## Documentation
