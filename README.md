@@ -1,4 +1,4 @@
-# Pypuyo
+# pypuyo
 A pip package to make Puyo-Puyo-ish games.
 ```python
 >>> import pypuyo as ppy
