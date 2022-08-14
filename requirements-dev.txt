@@ -1,1 +1,1 @@
-twine ~= 2.7
+twine ~= 2.7a
