@@ -17,7 +17,7 @@ A pip package to make Puyo-Puyo-ish games.
  [None, None, None]]
 ```
 # Installation
-## By pip
+### pip
 `$ python3 -m pip install pupuyo`
 # Cloning repo
 `$ git clone https://github.com/nnamaco/pypuyo/`
