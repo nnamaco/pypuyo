@@ -1,3 +1,9 @@
+import numpy as np
+from math import floor
+from random import choice
+from copy import deepcopy
+
+
 class Game:
     class _Puyo:
         def __init__(self, x, y, color):
@@ -133,41 +139,46 @@ class Game:
                                       self._Puyo(floor(self.width / 2), 0, choice(self.colors))
                                      ]   
                 self.dir_ = 2
-            # puyo-disapearing
-            targets = {color: [] for color in self.colors}
-            for y, list_ in enumerate(self.board[self.highest_y:]):
-                for x, color in enumerate(list_):
-                    if color is not None:
-                        target = []
-                        def _find(x, y ,list):
-                            list.append((x, y))
-                            for direction in ((0, 1), (1, 0), (0, -1), (-1, 0)):
-                                find_x = x + direction[0]
-                                find_y = y + direction[1]
-                                if (find_x in range(self.width)) and (find_y in range(self.height)):
-                                        if ((find_x, find_y) not in list) and (self.board[find_y][find_x] == self.board[y][x]):
-                                            _find(find_x, find_y, list)
-                        _find(x, (y + self.highest_y), target)
-                        target.sort(key=lambda x: x[0] + (x[1] * 100))
-                        if (len(target) >= 4) and (target not in targets[color]):
-                            targets[color].append(target)
-            print(targets)
-            for color_list in targets.values():
-                if len(color_list) > 0:
-                    for target in color_list:
-                        for tf in target:
-                            self.board[tf[1]][tf[0]] = None
-            # puyo-dropping
-            print(self.board[:(self.highest_y - 1):-1])
-            for y, list_ in enumerate(self.board[:(self.highest_y - 1):-1]):
-                true_y = self.height - (y + 1)
-                if np.all(self.board[(self.highest_y - 1):(true_y + 1)] == None):
-                    self.highest_y = (true_y + 1)
-                    break
-                else:
+            keep_finding = True
+            while keep_finding == True:
+                # puyo-dropping
+                print(self.board[:(self.highest_y - 1):-1])
+                for y, list_ in enumerate(self.board[:(self.highest_y - 1):-1]):
+                    true_y = self.height - (y + 1)
+                    if np.all(self.board[(self.highest_y - 1):(true_y + 1)] == None):
+                        self.highest_y = (true_y + 1)
+                        break
+                    else:
+                        for x, color in enumerate(list_):
+                            if color == None:
+                                self.board[true_y][x], self.board[true_y - 1][x] = self.board[true_y - 1][x], self.board[true_y][x]
+                # puyo-disapearing
+                targets = {color: [] for color in self.colors}
+                for y, list_ in enumerate(self.board[self.highest_y:]):
                     for x, color in enumerate(list_):
-                        if color == None:
-                            self.board[true_y][x], self.board[true_y - 1][x] = self.board[true_y - 1][x], self.board[true_y][x]
+                        if color is not None:
+                            target = []
+                            def _find(x, y ,list):
+                                list.append((x, y))
+                                for direction in ((0, 1), (1, 0), (0, -1), (-1, 0)):
+                                    find_x = x + direction[0]
+                                    find_y = y + direction[1]
+                                    if (find_x in range(self.width)) and (find_y in range(self.height)):
+                                            if ((find_x, find_y) not in list) and (self.board[find_y][find_x] == self.board[y][x]):
+                                                _find(find_x, find_y, list)
+                            _find(x, (y + self.highest_y), target)
+                            target.sort(key=lambda x: x[0] + (x[1] * 100))
+                            if (len(target) >= 4) and (target not in targets[color]):
+                                targets[color].append(target)
+                erase_count = 0
+                for color_list in targets.values():
+                    if len(color_list) > 0:
+                        for target in color_list:
+                            for tf in target:
+                                erase_count += 1
+                                self.board[tf[1]][tf[0]] = None
+                if erase_count == 0:
+                    keep_finding = False
             self.frame_count = 1
         else:
             self.frame_count += 1
