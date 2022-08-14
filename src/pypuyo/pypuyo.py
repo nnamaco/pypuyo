@@ -142,7 +142,6 @@ class Game:
             keep_finding = True
             while keep_finding == True:
                 # puyo-dropping
-                print(self.board[:(self.highest_y - 1):-1])
                 for y, list_ in enumerate(self.board[:(self.highest_y - 1):-1]):
                     true_y = self.height - (y + 1)
                     if np.all(self.board[(self.highest_y - 1):(true_y + 1)] == None):
