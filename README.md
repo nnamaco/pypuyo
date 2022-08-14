@@ -2,7 +2,6 @@
 A pip package to make Puyo-Puyo-ish games.
 ```python
 >>> import pypuyo as ppy
->>> from time import sleep
 >>> game = ppy.Game(width=3, height=3, frames_to_fall=1)
 >>> game.update()
 >>> game.update()
