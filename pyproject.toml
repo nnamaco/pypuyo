@@ -1,0 +1,19 @@
+[project]
+name = "pyyo"
+version = "0.0.1"
+authors = [
+  { name="nnamaco", email="eureka5129@gmail.com" },
+]
+description = "A package to make Puyo-Puyo-ish games."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/nnmaco/pyyo"
+"Bug Tracker" = "https://github.com/nnmaco/pyyo/issues"
