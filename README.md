@@ -6,20 +6,23 @@ A pip package to make Puyo-Puyo-ish games.
 # Usage
 ## Quickstart
 1. Create game instance by:
-`foo = pypuyo.Game()`
+```
+game = pypuyo.Game()
+```
 2. Go to next frame by:
-`foo.update()`
+```
+game.update()
+```
 3. Get array by:
-`foo.get()`
+```
+game.get()
+```
 ## Documentation
 ### Classes
-'Game':
+`Game`:
 |method      |desciption                    |arguments                                        |
 |----        |----                          |----                                             | 
-|`__init__`  |Constructor.                  |`width`: Width of the game.<br>
-                                             `height`: Height of the game.<br>
-                                             `types`: Array of possible puyos to fall.<br>
-                                             `frames_to_fall`: Frames that take puyos to fall.|
+|`__init__`  |Constructor.                  |`width`: Width of the game.<br>`height`: Height of the game.<br>`types`: Array of possible puyos to fall.<br>`frames_to_fall`: Frames that take puyos to fall.|
 |`move_right`|Move falling puyos right.     |-                                                |
 |`move_left` |Move falling puyos right.     |-                                                |
 |`spin_right`|Move falling puyos right.     |-                                                |
