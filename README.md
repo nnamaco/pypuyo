@@ -1,6 +1,26 @@
 # Pypuyo
-A pip package to make Puyo-Puyo-ish games.<br>
-https://pypi.org/project/pypuyo/
+A pip package to make Puyo-Puyo-ish games.
+```
+>>> import pypuyo as ppy
+>>> from time import sleep
+>>> game = ppy.Game(width=3, height=3, frames_to_fall=1)
+>>> game.update()
+>>> game.update()
+>>> print(game.get())
+[[None, "Yellow", None]
+ [None, None, None]
+ [None, None, None]]
+>>> game.update()
+>>> print(game.get())
+[[None, "Yellow", None]
+ [None, "Blue", None]
+ [None, None, None]]
+```
+# Installation
+## By pip
+`$ python3 -m pip install pupuyo`
+# Cloning repo
+`$ git clone https://github.com/nnamaco/pypuyo/`
 # Examples
 - A GUI example(https://github.com/nnamaco/pypuyo-example)
 - A shell CLI example(https://github.com/nnamaco/pypuyo-example-cli)
