@@ -1,5 +1,5 @@
 # Pypuyo
-A pip package to make Puyo-Puyo-ish games.
+A pip package to make Puyo-Puyo-ish games. https://pypi.org/project/pypuyo/
 # Examples
 - A GUI example(https://github.com/nnamaco/pypuyo-example)
 - A shell CLI example(https://github.com/nnamaco/pypuyo-example-cli)
