@@ -15,5 +15,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/nnmaco/pyyo"
-"Bug Tracker" = "https://github.com/nnmaco/pyyo/issues"
+"Homepage" = "https://github.com/nnmaco/pypuyo"
+"Bug Tracker" = "https://github.com/nnmaco/pypuyo/issues"
