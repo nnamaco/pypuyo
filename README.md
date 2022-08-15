@@ -42,7 +42,10 @@ game.get()
 ### Methods
 |method      |desciption                    |arguments                                        |
 |----        |----                          |----                                             | 
-|`start`     |Returns new game instance.    |`width`: Width of the game.<br>`height`: Height of the game.<br>`types`: Array of possible puyos to fall.<br>`frames_to_fall`: Frames that take puyos to fall.|
+|`start`     |Returns new `Game` instance.    |`width`: Width of the game.<br>`height`: Height of the game.<br>`types`: Array of possible puyos to fall.<br>`frames_to_fall`: Frames that take puyos to fall.|
+### Class `Game`
+|method      |desciption                    |arguments                                        |
+|----        |----                          |----                                             | 
 |`move_right`|Move falling puyos right.     |-                                                |
 |`move_left` |Move falling puyos right.     |-                                                |
 |`spin_right`|Move falling puyos right.     |-                                                |
