@@ -2,7 +2,7 @@
 A pip package to make Puyo-Puyo-ish games.
 ```python
 >>> import pypuyo as ppy
->>> game = ppy.Game(width=3, height=3, frames_to_fall=1)
+>>> game = ppy.start(width=3, height=3, frames_to_fall=1)
 >>> game.update()
 >>> game.update()
 >>> print(game.get())
@@ -39,11 +39,10 @@ game.update()
 game.get()
 ```
 ## Documentation
-### Classes
-`Game`:
+### Methods
 |method      |desciption                    |arguments                                        |
 |----        |----                          |----                                             | 
-|`__init__`  |Constructor.                  |`width`: Width of the game.<br>`height`: Height of the game.<br>`types`: Array of possible puyos to fall.<br>`frames_to_fall`: Frames that take puyos to fall.|
+|`start`     |Returns new game instance.    |`width`: Width of the game.<br>`height`: Height of the game.<br>`types`: Array of possible puyos to fall.<br>`frames_to_fall`: Frames that take puyos to fall.|
 |`move_right`|Move falling puyos right.     |-                                                |
 |`move_left` |Move falling puyos right.     |-                                                |
 |`spin_right`|Move falling puyos right.     |-                                                |
