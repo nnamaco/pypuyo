@@ -28,7 +28,7 @@ A pip package to make Puyo-Puyo-ish games.
 ## Quickstart
 1. Create game instance by:
 ```python
-game = pypuyo.Game()
+game = pypuyo.start()
 ```
 2. Go to next frame by:
 ```python
