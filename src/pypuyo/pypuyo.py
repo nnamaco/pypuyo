@@ -26,7 +26,7 @@ class Game:
         def set_y(self, val):
             self.y = val
 
-    def __init__(self, width=5, height=13, frames_to_fall=1, types=("Red", "Blue", "Yellow", "Green", "Purple")):
+    def __init__(self, width, height, frames_to_fall, types):
         self.width = width
         self.height = (height + 2)
         self.board = np.full((self.height, self.width), None, dtype=object)
@@ -181,3 +181,6 @@ class Game:
             self.frame_count = 1
         else:
             self.frame_count += 1
+
+def start(width=5, height=13, frames_to_fall=1, types=("Red", "Blue", "Yellow", "Green", "Purple")):
+    return Game(width, height, frames_to_fall, types)
